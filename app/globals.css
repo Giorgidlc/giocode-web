@@ -1,12 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-white: #FFF0EB;
+  --color-red: #F40C3F;
+  --color-green: #32FFAB;
+  --color-orange: #FF5C00;
+  --color-brown: #540000;
+  --color-dark: #160000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-dark);
+    --foreground: var(--color-white);
   }
 }
 
