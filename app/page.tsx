@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-
+import MaintenanceCard from "@/components/maintenance/MaintenanceCard";
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -37,6 +37,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <MaintenanceCard />
     </div>
   );
 }
