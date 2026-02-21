@@ -1,0 +1,11 @@
+.logoContainer {
+  display: flex;
+  padding: 2vw 5vw;
+  max-width: 300px;
+}
+
+.logoContainer img {
+  flex: 1;
+  min-width: 100%;
+  object-fit: contain;
+}

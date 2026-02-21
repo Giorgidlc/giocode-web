@@ -1,24 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import MaintenanceCard from "@/components/maintenance/MaintenanceCard";
+import ServiceCard from "@/components/ui/service-card/ServiceCard";
+import HeaderNav from "@/components/sections/header-nav/HeaderNav";
+import HeroSection from "@/components/sections/hero-section/HeroSection";
+
 export default function Home() {
   return (
     <div className={styles.page}>
+      <HeaderNav />
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/imagotipo-white-giocode.png"
-          alt="Giocode logo"
-          width={159}
-          height={40}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>Devs <span> + </span> Creatividad</h1>
-          <p>
-            Colaboramos con creativos para transformar sus ideas en experiencias digitales memorables, combinando código limpio con un toque de innovación.
-          </p>
-        </div>
+        <HeroSection />
         <div className={styles.ctas}>
           <a
             className={styles.primary}
@@ -38,6 +30,12 @@ export default function Home() {
         </div>
       </main>
       <MaintenanceCard />
+      <ServiceCard
+        tag= "Desarrollo web"
+        title="Desarrollo web"
+        description="Creamos sitios web modernos y funcionales que destacan en el mundo digital."
+      />
+    
     </div>
   );
 }
