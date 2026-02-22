@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./header-nav.module.css";
 export default function HeaderNav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <div className={styles.logoContainer}>
         <Image
           className={styles.logo}

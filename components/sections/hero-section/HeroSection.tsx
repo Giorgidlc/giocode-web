@@ -6,13 +6,13 @@ export default function HeroSection() {
   return (
     <div className={styles.intro}>
       <div className={styles.introContent}>
-        <h1>
+        <h1 className={styles.introTitle}>
           Devs <span> + </span> Creatividad
         </h1>
-        <p style={{ fontSize: "24px", fontWeight: 600 }}>
+        <p className={styles.introSubtitle}>
           Expertos con los que amarás trabajar
         </p>
-        <p>
+        <p className={styles.introText}>
           Colaboramos con creativos para transformar sus ideas en experiencias digitales memorables, combinando código limpio con un toque de innovación.
         </p>
       </div>

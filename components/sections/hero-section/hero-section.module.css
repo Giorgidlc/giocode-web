@@ -1,7 +1,8 @@
 .intro {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 4rem;
 }
 
 .introContent {
@@ -12,7 +13,7 @@
   gap: 16px;
 }
 
-.introContent h1 {
+.introTitle {
   font-size: var(--font-size-xl);
   font-weight: 600;
   line-height: var(--space-line-height-xl);
@@ -21,11 +22,16 @@
   color: var(--text-primary);
 }
 
-.introContent p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
+.introSubtitle {
+  font-size: var(--font-size-lg);
   text-wrap: balance;
+}
+
+.introText {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  line-height: var(--space-line-height-md);
+  text-wrap: pretty;
   color: var(--text-primary);
 }
 
@@ -52,13 +58,9 @@
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 16px;
+    padding-block: 9vw;
   }
 
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
 
   .introImage {
     max-width: 180px;

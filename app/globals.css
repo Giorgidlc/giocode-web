@@ -6,12 +6,13 @@
   --color-brown: #540000;
   --color-dark: #160000;
 
-  --font-size-xl: clamp(2.4375rem, 0.9886rem + 7.2443vw, 5.625rem);
-  /* --font-size-lg:
-  --font-size-md:
-  --font-size-xs: 
+  --font-size-xl: clamp(2.4375rem, 1.3864rem + 5.2557vw, 4.75rem);
+  --font-size-lg: clamp(1.125rem, 0.9545rem + 0.8523vw, 1.5rem);
+  --font-size-md: clamp(0.875rem, 0.7614rem + 0.5682vw, 1.125rem);
+ /* --font-size-xs: 
  */
-  --space-line-height-xl: clamp(2.68125rem, 1.6273rem + 5.2699vw, 5rem);
+  --space-line-height-xl: clamp(2.68125rem, 1.9114rem + 3.8494vw, 4.375rem);
+  --space-line-height-md: clamp(1.1375rem, 0.9898rem + 0.7386vw, 1.4625rem);
 }
 
 @media (prefers-color-scheme: dark) {
