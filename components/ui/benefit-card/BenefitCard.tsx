@@ -1,19 +1,25 @@
 import Card from "@/components/ui/card/Card";
-import styles from "@/card.module.css";
+import styles from "@/components/ui/card/card.module.css";
 
 interface BenefitCardProps {
   title: string;
   description: string;
+  classBackground?: string;
+  className?: string;
 }
 
-export default function BenefitCard({ title, description }: BenefitCardProps) {
+export default function BenefitCard({
+  title,
+  description,
+  classBackground = "",
+
+}: BenefitCardProps) {
   return (
-    <Card className={styles.themeLight}>
+    <Card classBackground={classBackground} >
       <div className={styles.cardContent}>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </Card>
-  )
-
+  );
 }

@@ -1,0 +1,41 @@
+.vision {
+  grid-column: 1 / -1;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding-block: 30vw;
+  grid-template-columns: repeat(16, 1fr);
+  
+}
+
+.visionContent {
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: center;
+  gap: 1rem;
+  grid-column: 2 / 16;
+}
+
+.visionContent h3 {
+  font-size: var(--font-size-xl);
+  line-height: var(--space-line-height-xl);
+  font-weight: 600;
+
+}
+
+.visionContent :is(h2,h3) span {
+  color: var(--text-secondary);
+}
+
+@media (min-width: 728px){
+  .vision {
+    grid-template-columns: repeat(12, 1fr);
+    padding-block: 8vw;
+  }
+  .visionContent {
+    grid-column: 2 / 9;
+  }
+   
+}

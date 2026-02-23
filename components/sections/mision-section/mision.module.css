@@ -1,0 +1,29 @@
+.mision {
+  grid-column: 1 / -1;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding-block: 5vw;
+}
+
+.misionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.misionContent h3 {
+  font-size: var(--font-size-lg);
+  line-height: var(--space-line-height-lg);
+  font-weight: 600;
+  text-align: center;
+  padding-inline: 1.2rem;
+
+}
+
+.misionContent :is(h2,h3) span {
+  color: var(--text-secondary);
+}

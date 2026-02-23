@@ -11,10 +11,10 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, tag }: ServiceCardProps) {
   return (
-    <Card className={styles.themeLight}>
+    <Card classBackground={styles.themeLight}>
       <Badge badgeText={tag} />
       <div className={styles.cardContent}>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
       

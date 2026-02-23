@@ -9,9 +9,11 @@
   padding: var(--space-block) var(--space-inline);
   background-color: inherit;
   border-radius: 21px;
-  min-width: 280px;
-  max-width: calc(280px*2)
-
+  min-width: 235px;
+  width: calc(100% - 280px);
+  max-width: calc(280px*2);
+  scroll-snap-align: start;
+  flex-shrink: 0;
 }
 
 .cardContent {
@@ -20,6 +22,19 @@
   gap: 8px;
 }
 
+.cardContent h3 {
+  font-size: var(--font-size-lg);
+  line-height: var(--space-line-height-lg);
+  text-wrap: balance;
+  font-weight: 600;
+}
+
+.cardContent p {
+  font-size: var(--font-size-md);
+  line-height: var(--space-line-height-md);
+  font-weight: 400;
+  text-wrap: pretty;
+}
 
 .themeLight {
   background-color: var(--color-white);
