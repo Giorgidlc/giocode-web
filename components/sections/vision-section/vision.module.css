@@ -4,7 +4,7 @@
   place-content: center;
   background-color: var(--color-dark);
   color: var(--color-white);
-  padding-block: 30vw;
+  padding-block-end: 5vw;
   grid-template-columns: repeat(16, 1fr);
   
 }
@@ -29,10 +29,10 @@
   color: var(--text-secondary);
 }
 
-@media (min-width: 728px){
+@media (min-width: 1024px){
   .vision {
     grid-template-columns: repeat(12, 1fr);
-    padding-block: 8vw;
+    padding-block-end: 8vw;
   }
   .visionContent {
     grid-column: 2 / 9;

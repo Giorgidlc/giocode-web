@@ -10,7 +10,7 @@
   background-color: inherit;
   border-radius: 21px;
   min-width: 235px;
-  width: calc(100% - 280px);
+  width: 100%;
   max-width: calc(280px*2);
   scroll-snap-align: start;
   flex-shrink: 0;
