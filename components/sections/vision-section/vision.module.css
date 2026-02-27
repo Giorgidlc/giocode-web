@@ -2,7 +2,6 @@
   grid-column: 1 / -1;
   display: grid;
   place-content: center;
-  background-color: var(--color-dark);
   color: var(--color-white);
   padding-block-end: 5vw;
   grid-template-columns: repeat(16, 1fr);
