@@ -4,11 +4,10 @@ export default function ValueProposition() {
   return (
     <section className={styles.valueProposition}>
       <h2>
-        Sabemos lo <span>difícil</span> que es para las agencias y diseñadores <span>encontrar</span> los <span>desarrolladores</span> adecuados
+        Sé lo <span>difícil</span> que es para las agencias y diseñadores <span>encontrar</span> un <span>desarrollador</span> que hable el lenguaje del diseño.
       </h2>
       <p>
-        Encontrar desarrolladores que realmente entiendan el trabajo de un creativo es un reto. En <span>Giocode</span>, nos especializamos en colaborar
-        estrechamente con agencias y profesionales del diseño para convertir sus ideas en realidad.
+        Entiendo el valor de cada detalle y la intención detrás de cada píxel. En <span>Giocode</span>, trabajo contigo para que cada decisión de diseño tenga un soporte técnico estable y bien pensado.
       </p>
     </section>
   );

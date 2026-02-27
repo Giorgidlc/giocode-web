@@ -1,0 +1,16 @@
+.footer {
+  grid-column: 1 / -1;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  padding-block: 2vw;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}

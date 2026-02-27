@@ -38,6 +38,11 @@
   z-index: 2;
 }
 
+:is(.servicesWrapper) > .card  {
+  background-color: blue;
+  justify-content: space-between;
+}
+
 
 
 .servicesWrapper:focus-visible {

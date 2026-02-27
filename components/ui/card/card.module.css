@@ -2,7 +2,7 @@
   --space-block: 32px;
   --space-inline: 16px;
   --gap: 16px;
-  
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -15,6 +15,8 @@
   scroll-snap-align: start;
   flex-shrink: 0;
 }
+
+
 
 .cardContent {
   display: flex;
@@ -39,11 +41,18 @@
 .themeLight {
   background-color: var(--color-white);
   color: var(--color-brown);
+
+  > img  {
+    color: var(--color-brown);
+  }
 }
 
 .themeOrange {
   background-color: var(--color-orange);
   color: var(--color-white);
+  > img  {
+    color: var(--color-white);
+  }
 }
 
 .themePink {

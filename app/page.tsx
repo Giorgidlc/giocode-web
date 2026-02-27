@@ -6,6 +6,7 @@ import Services from "@/components/sections/services-section/Services";
 import Mision from "@/components/sections/mision-section/Mision";
 import Benefits from "@/components/sections/benefits-section/Benefits";
 import Vision from "@/components/sections/vision-section/Vision";
+import Footer from "@/components/sections/footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Mision />
         <Benefits /> 
         <Vision />
+        <Footer />
       </main>
    
     

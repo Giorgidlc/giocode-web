@@ -11,13 +11,12 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, tag }: ServiceCardProps) {
   return (
-    <Card classBackground={styles.themeLight}>
+    <Card classBackground={styles.themeLight} style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }} >
       <Badge badgeText={tag} />
       <div className={styles.cardContent}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      
       <Button btnText="Contáctame" />
     </Card>
   );

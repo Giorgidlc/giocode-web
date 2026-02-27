@@ -21,6 +21,7 @@
   font-weight: 600;
   text-align: center;
   padding-inline: 1.2rem;
+  max-width: 80ch;
 
 }
 

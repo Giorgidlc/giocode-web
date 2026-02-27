@@ -1,6 +1,10 @@
 import BenefitCard from "@/components/ui/benefit-card/BenefitCard";
 import styles from "./benefits.module.css";
 import bgCard from "@/components/ui/card/card.module.css";
+import GraphOptimize from "@/components/ui/icons/GraphOptimize";
+import GraphDiamond from "@/components/ui/icons/GraphDiamond";
+import GraphEyeStart from "@/components/ui/icons/GraphEyeStart";
+import GraphSupport from "@/components/ui/icons/GraphSupport";
 
 export default function Benefits() {
   return (
@@ -13,42 +17,50 @@ export default function Benefits() {
         className={`${styles.benefitsWrapper} ${styles.yourHand}`}
         role="region"
         aria-label="Beneficios"
-        tabIndex={0}
+    
       >
         <legend>Beneficios</legend>
 
-        <label className={styles.benefitCard}>
+        <label className={styles.benefitCard} tabIndex={0}>
           <BenefitCard
+            IconCard={GraphOptimize}
+            iconColor="var(--color-brown)"
             classBackground={bgCard.themeOrange}
             title="Proceso optimizado"
-            description="Nuestro proceso interno está optimizado para la eficiencia y la eficacia. Nos gusta ser directos. El equipo puede ver el cronograma del proyecto a través del panel de control y colaborar en línea. ¡Sin tickets, lo prometemos!"
+            description="Olvida los hilos de correos y los sistemas de tickets lentos. Optimizo cada etapa para que la evolución de tu web sea constante y visible."
           />
           <input type="radio" name="the-looper" value="card01" />
         </label>
 
-        <label className={styles.benefitCard}>
+        <label className={styles.benefitCard} tabIndex={0}>
           <BenefitCard
+            IconCard={GraphDiamond}
+            iconColor="var(--color-pink)"
             classBackground={bgCard.themeLight}
-            title="Enfoque orientado al diseñador"
-            description="Creemos en un entorno de trabajo totalmente remoto, positivo, inspirador y gratificante que fomente el crecimiento, la creatividad y la innovación."
+            title="Colaboración real"
+            description="Trabajo contigo, no para ti. Tomo decisiones a tu lado y mantengo un ritmo que respeta tus tiempos y prioridades."
           />
           <input type="radio" name="the-looper" value="card02" />
         </label>
 
-        <label className={styles.benefitCard}>
+        <label className={styles.benefitCard} tabIndex={0}>
           <BenefitCard
+            IconCard={GraphEyeStart}
+            iconColor="var(--color-dark)"
             classBackground={bgCard.themePink}
             title="Desarrollo web de alta calidad"
-            description="Crear experiencias digitales excepcionales requiere pasión, atención al detalle y dedicación al más alto nivel. Nos importa nuestro trabajo y siempre nos esforzamos por ofrecer los mejores resultados."
+            description="Creo experiencias digitales que requiere pasión, atención y dedicación al más alto nivel. Me importa mi trabajo y siempre me esfuerzo por ofrecerte los mejores resultados."
           />
           <input type="radio" name="the-looper" value="card03" />
         </label>
 
-        <label className={styles.benefitCard}>
+        <label className={styles.benefitCard} tabIndex={0}>
           <BenefitCard
+            IconCard={GraphSupport}
+            iconColor="var(--color-pink)"
             classBackground={bgCard.themeBrown}
-            title="Desarrollo de sitios web a medida"
-            description="Si usted está buscando un sitio estático, uno de WordPress, o un headless (Astro/React) CMS, tenemos la solución adecuada para su cliente."
+            title="Soporte técnico sólido"
+            description="Permíteme gestionar el mantenimiento posterior del sitio web y responder a cualquier pregunta técnica que tus clientes puedan tener."
           />
           <input type="radio" name="the-looper" value="card04" />
         </label>

@@ -7,13 +7,13 @@ export default function HeroSection() {
     <div className={styles.intro}>
       <div className={styles.introContent}>
         <h1 className={styles.introTitle}>
-          Devs <span> + </span> Creatividad
+          Código <span> + </span> Creatividad
         </h1>
         <p className={styles.introSubtitle}>
-          Expertos con los que amarás trabajar
+          El partner tecnológico para tus grandes ideas
         </p>
         <p className={styles.introText}>
-          Colaboramos con creativos para transformar sus ideas en experiencias digitales memorables, combinando código limpio con un toque de innovación.
+          Ayudo a creativos y marcas a materializar sus proyectos más complejos mediante tecnologías modernas y diseño funcional.
         </p>
       </div>
       <div className={styles.introImage}>
