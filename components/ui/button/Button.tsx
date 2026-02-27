@@ -11,7 +11,8 @@ export default function Button({btnText, absoluteClass = ""}: ButtonProps) {
     <div className={`${styles.ctas} ${absoluteClass}`} role="button">
           <a
             className={styles.primary}
-           href="https://wa.me/+34661963517?text=Hola%20Giocode%2C%20he%20visto%20que%20la%20web%20est%C3%A1%20en%20mantenimiento.%20Me%20gustar%C3%ADa%20contactar%20contigo."
+           href="https://wa.me/+34661963517?text=Hola%20Giocode%2C%20estoy%20interesado%20en%20tus%20servicios%20de%20dise%C3%B1o%20y%20desarrollo%20web%20y%20me%20gustar%C3%ADa%20contactar%20contigo.
+"
             target="_blank"
             rel="noopener noreferrer"
           >
