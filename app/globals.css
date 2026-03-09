@@ -21,7 +21,7 @@
 }
 
 html{
-  max-width: 100vw;
+  /* max-width: 100vw; */
   overflow-x: hidden;
   color-scheme: dark;
   background: var(--background);

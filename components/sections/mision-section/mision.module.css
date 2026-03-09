@@ -4,7 +4,7 @@
   place-content: center;
   background-color: var(--color-white);
   color: var(--color-dark);
-  padding-block: 5vw;
+  padding-block: 10vw;
 }
 
 .misionContent {
@@ -27,4 +27,12 @@
 
 .misionContent :is(h2,h3) span {
   color: var(--text-secondary);
+}
+
+
+@media (min-width: 1024px){
+  .mision {
+    padding-block: 5vw;
+  }
+   
 }

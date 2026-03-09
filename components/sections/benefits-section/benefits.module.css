@@ -2,8 +2,8 @@
   grid-column: 2 / 16;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-block: 5vw;
+  gap: 0rem;
+  padding-block: 10vw;
 }
 
 .benefits h2 {
@@ -26,9 +26,8 @@
 .benefitsWrapper {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(269px, 1fr));
   gap: 1.5rem;
-  padding: 2vw;
 }
 
 .benefitsWrapper:focus-visible {
