@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeyWow from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const heyWow = HeyWow({
@@ -67,6 +68,7 @@ export default function RootLayout({
         {children}
       </body>
       <SpeedInsights/>
+      <Analytics/>
     </html>
   );
 }
