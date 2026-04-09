@@ -65,8 +65,8 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${heyWow.className} `}>
         {children}
+        <SpeedInsights />
       </body>
-      <SpeedInsights/>
     </html>
   );
 }
