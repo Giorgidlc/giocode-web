@@ -36,6 +36,14 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
   z-index: 2;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.servicesWrapper:active,
+.dragging {
+  cursor: grabbing;
 }
 
 :is(.servicesWrapper) > .card  {

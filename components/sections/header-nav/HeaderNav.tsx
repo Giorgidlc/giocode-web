@@ -13,6 +13,15 @@ export default function HeaderNav() {
           priority
         />
       </div>
+      <div className={styles.containerNavLinks}>
+        <a
+          href="https://www.behance.net/porfolio-jorgedeleon"
+          target="_blank" rel="noopener noreferrer"
+          className={styles.navLink}
+        >
+          Porfolio
+        </a>
+      </div>
     </nav>
   )
 }
