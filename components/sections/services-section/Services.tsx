@@ -1,81 +1,93 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import ServiceCard from "@/components/ui/service-card/ServiceCard";
 import styles from "./services.module.css";
 
 export default function Services() {
   const servicesRef = useRef<HTMLDivElement | null>(null);
-  const isDraggingRef = useRef(false);
-  const startXRef = useRef(0);
-  const scrollLeftRef = useRef(0);
-  const [isDragging, setIsDragging] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const onPointerDown = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    event.preventDefault();
+  const updateScrollButtons = useCallback(() => {
     const element = servicesRef.current;
     if (!element) return;
 
-    isDraggingRef.current = true;
-    setIsDragging(true);
-    startXRef.current = event.clientX;
-    scrollLeftRef.current = element.scrollLeft;
-    event.currentTarget.setPointerCapture(event.pointerId);
+    setCanScrollLeft(element.scrollLeft > 1);
+    setCanScrollRight(
+      element.scrollLeft + element.clientWidth < element.scrollWidth - 1
+    );
   }, []);
 
-  const onPointerMove = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
-    if (!isDraggingRef.current || !servicesRef.current) return;
+  const scroll = useCallback(
+    (direction: "left" | "right") => {
+      const element = servicesRef.current;
+      if (!element) return;
 
-    const deltaX = event.clientX - startXRef.current;
-    servicesRef.current.scrollLeft = scrollLeftRef.current - deltaX;
-  }, []);
+      const card = element.querySelector(".card") as HTMLElement | null;
+      const scrollAmount = card
+        ? card.offsetWidth + parseInt(getComputedStyle(element).gap || "16")
+        : element.clientWidth * 0.85;
 
-  const onMouseDown = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
-    event.preventDefault();
+      element.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    },
+    []
+  );
+
+  useEffect(() => {
     const element = servicesRef.current;
     if (!element) return;
 
-    isDraggingRef.current = true;
-    setIsDragging(true);
-    startXRef.current = event.clientX;
-    scrollLeftRef.current = element.scrollLeft;
-  }, []);
+    updateScrollButtons();
+    element.addEventListener("scroll", updateScrollButtons, { passive: true });
+    window.addEventListener("resize", updateScrollButtons);
 
-  const onMouseMove = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDraggingRef.current || !servicesRef.current) return;
+    return () => {
+      element.removeEventListener("scroll", updateScrollButtons);
+      window.removeEventListener("resize", updateScrollButtons);
+    };
+  }, [updateScrollButtons]);
 
-    const deltaX = event.clientX - startXRef.current;
-    servicesRef.current.scrollLeft = scrollLeftRef.current - deltaX;
-  }, []);
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const activeElement = document.activeElement;
+      const isInside =
+        activeElement === servicesRef.current ||
+        servicesRef.current?.contains(activeElement || null);
 
-  const endDrag = useCallback((event: React.PointerEvent<HTMLDivElement> | React.MouseEvent<HTMLDivElement>) => {
-    if (!isDraggingRef.current) return;
+      if (!isInside) return;
 
-    isDraggingRef.current = false;
-    setIsDragging(false);
-    if ('pointerId' in event) {
-      servicesRef.current?.releasePointerCapture(event.pointerId);
-    }
-  }, []);
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        scroll("left");
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        scroll("right");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [scroll]);
 
   return (
     <section className={styles.service}>
-      <h2>Todo gira en torno a los <span>sitios web</span></h2>
-      <p>No prometo la luna, y no hago de todo. Pero lo que hago lo hago muy bien.</p>
+      <h2>
+        Todo gira en torno a los <span>sitios web</span>
+      </h2>
+      <p>
+        No prometo la luna, y no hago de todo. Pero lo que hago lo hago muy bien.
+      </p>
+
       <div
         ref={servicesRef}
-        className={`${styles.servicesWrapper} ${isDragging ? styles.dragging : ""}`}
+        className={styles.servicesWrapper}
         role="region"
         aria-label="Servicios"
         tabIndex={0}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={endDrag}
-        onPointerLeave={endDrag}
-        onPointerCancel={endDrag}
-        onMouseDown={onMouseDown}
-        onMouseMove={onMouseMove}
-        onMouseUp={endDrag}
       >
         <ServiceCard
           tag="Diseño Estratégico"
@@ -97,6 +109,50 @@ export default function Services() {
           title="Estrategia y Rendimiento Digital"
           description="Optimizo la velocidad, la seguridad y el SEO para asegurar que tu proyecto sea técnicamente sólido y esté preparado para escalar en su sector."
         />
+      </div>
+<div className={styles.controls}>
+        <button
+          className={styles.arrowButton}
+          onClick={() => scroll("left")}
+          disabled={!canScrollLeft}
+          aria-label="Anterior servicio"
+          type="button"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <button
+          className={styles.arrowButton}
+          onClick={() => scroll("right")}
+          disabled={!canScrollRight}
+          aria-label="Siguiente servicio"
+          type="button"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
       </div>
     </section>
   );
