@@ -1,7 +1,7 @@
-import { withPayload } from "@payloadcms/next/withPayload"
-import type { NextConfig } from 'next'
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+import { withPayload } from '@payloadcms/next/withPayload'
 
-export default withPayload(nextConfig);
+const nextConfig = {
+  serverExternalPackages: ['payload'],
+}
+
+export default withPayload(nextConfig)

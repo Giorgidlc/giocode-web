@@ -7,18 +7,17 @@ import "../globals.css";
 const heyWow = HeyWow({
   src: [
     {
-      path: '../../public/font/HeyWow-Book.woff2',
+      path: '../../../public/font/HeyWow-Book.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/font/HeyWow-SemiBold.woff',
+      path: '../../../public/font/HeyWow-SemiBold.woff',
       weight: '600',
       style: 'normal',
     },
   ],
 });
-  
 
 export const metadata: Metadata = {
   title: "Giocode",

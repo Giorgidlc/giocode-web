@@ -1,7 +1,16 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './page.module.css'
+
+interface Service {
+  id: string
+  titulo: string
+  descripcion: string
+  precio: number
+  activo: boolean
+  icono?: string
+}
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -11,9 +20,19 @@ export default function ContactoPage() {
     mensaje: '',
     servicio: '',
   })
+  const [services, setServices] = useState<Service[]>([])
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch('/api/services')
+      .then(res => res.json())
+      .then(data => setServices(data.docs || []))
+      .catch(() => setServices([]))
+      .finally(() => setLoading(false))
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -43,6 +62,8 @@ export default function ContactoPage() {
       setSubmitting(false)
     }
   }
+
+  const activeServices = services.filter(s => s.activo)
 
   return (
     <main className={styles.container}>
@@ -122,12 +143,14 @@ export default function ContactoPage() {
               value={formData.servicio}
               onChange={handleChange}
               className={styles.select}
+              disabled={loading}
             >
               <option value="">Selecciona un servicio</option>
-              <option value="web">Desarrollo Web</option>
-              <option value="mobile">App Móvil</option>
-              <option value="uiux">Diseño UI/UX</option>
-              <option value="consulting">Consultoría</option>
+              {activeServices.map(service => (
+                <option key={service.id} value={service.titulo}>
+                  {service.titulo}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -148,7 +171,7 @@ export default function ContactoPage() {
 
           <button
             type="submit"
-            disabled={submitting}
+            disabled={submitting || loading}
             className={styles.button}
           >
             {submitting ? 'Enviando...' : 'Enviar mensaje'}

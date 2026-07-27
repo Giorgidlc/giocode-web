@@ -3,6 +3,8 @@ import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { buildConfig } from 'payload'
+import { Leads } from './src/collections/Leads'
+import { Services } from './src/collections/Services'
 
 export default buildConfig({
 
@@ -29,55 +31,7 @@ export default buildConfig({
 
   editor: lexicalEditor(),
 
-  collections: [
-    {
-      slug: 'leads',
-      fields: [
-        { name: 'nombre', type: 'text', required: true },
-        { name: 'email', type: 'email', required: true },
-        { name: 'telefono', type: 'text' },
-        { name: 'mensaje', type: 'textarea' },
-        {
-          name: 'servicio',
-          type: 'select',
-          options: [
-            { label: 'Desarrollo Web', value: 'web' },
-            { label: 'App Móvil', value: 'mobile' },
-            { label: 'Diseño UI/UX', value: 'uiux' },
-            { label: 'Consultoría', value: 'consulting' },
-          ],
-        },
-        {
-          name: 'estado',
-          type: 'select',
-          options: [
-            { label: 'Nuevo', value: 'new' },
-            { label: 'Contactado', value: 'contacted' },
-            { label: 'Convertido', value: 'converted' },
-            { label: 'Perdido', value: 'lost' },
-          ],
-          defaultValue: 'new',
-        },
-      ],
-      admin: {
-        useAsTitle: 'nombre',
-        defaultColumns: ['nombre', 'email', 'servicio', 'estado'],
-      },
-    },
-    {
-      slug: 'services',
-      fields: [
-        { name: 'titulo', type: 'text', required: true },
-        { name: 'descripcion', type: 'textarea' },
-        { name: 'precio', type: 'number' },
-        { name: 'activo', type: 'checkbox', defaultValue: true },
-        { name: 'icono', type: 'text' },
-      ],
-      admin: {
-        useAsTitle: 'titulo',
-      },
-    },
-  ],
+  collections: [Leads, Services],
 
   plugins: [
     formBuilderPlugin({
