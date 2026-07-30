@@ -1,7 +1,7 @@
 .badge {
   display: block;
   padding: 8px;
-  border-radius: 11px;
+  border-radius: 9px;
   border: solid 1px var(--color-dark);
   width: fit-content;
 }

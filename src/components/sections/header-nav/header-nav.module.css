@@ -1,11 +1,32 @@
 .nav {
- grid-column: 2 / 16;
+ position: fixed;
+ top: clamp(0.75rem, 2vw, 1rem); 
+ left: 50%;
+ transform: translateX(-50%);
  display: flex;
  justify-content: space-between;
+ width: 98%;
  align-items: center;
+ z-index: 100;
+ border-radius: 14px; 
+ box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+ padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
 }
+
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  z-index: -1;
+  background-color:  rgba(76, 21, 3, 0.1);
+  backdrop-filter: blur(13px);
+  border: 1px solid #fff0eb3c;
+  border-radius: inherit;
+}
+
 .logoContainer {
-  padding-block: 6vw;
+  display: flex;
+  padding-block: 1vh;
 }
 
 .logoContainer img {
@@ -35,10 +56,7 @@
 } 
 
 @media (min-width: 1024px) {
-  .nav {
-     grid-column: 2 / 12;
-     padding: 0;
-  }
+
   .logoContainer {
     padding-inline: 0;
   }

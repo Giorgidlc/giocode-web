@@ -8,7 +8,7 @@
   gap: var(--gap);
   padding: var(--space-block) var(--space-inline);
   background-color: inherit;
-  border-radius: 21px;
+  border-radius: 14px;
   min-width: 235px;
   width: 100%;
   max-width: calc(280px*2);
