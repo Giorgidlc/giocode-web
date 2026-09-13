@@ -4,6 +4,7 @@ export default function HeaderNav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.logoContainer}>
+        <a href="/" aria-label="Giocode logo" rel="home">
         <Image
           className={styles.logo}
           src="/imagotipo-white-giocode.png"
@@ -12,6 +13,7 @@ export default function HeaderNav() {
           height={40}
           priority
         />
+        </a>
       </div>
       <div className={styles.containerNavLinks}>
         <a

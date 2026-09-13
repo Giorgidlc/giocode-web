@@ -1,14 +1,94 @@
-.container {
+/* ============ Page shell ============ */
+
+.page {
+  position: relative;
   min-height: 100dvh;
-  padding: var(--space-line-height-xl);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.content {
+.container {
+  flex: 1;
   width: 100%;
-  max-width: 640px;
-  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block: clamp(6.5rem, 16vh, 9.5rem) clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.layout {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: stretch;
+}
+
+/* ============ Visual (left) ============ */
+
+.visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: linear-gradient(160deg, rgba(84, 0, 0, 0.55), rgba(22, 0, 0, 0.35));
+}
+
+.blobPink,
+.blobGreen {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blobPink {
+  width: 320px;
+  height: 320px;
+  top: -80px;
+  right: -60px;
+  background: radial-gradient(circle, var(--color-pink), transparent 70%);
+  animation: blobDrift 14s ease-in-out infinite;
+}
+
+.blobGreen {
+  width: 320px;
+  height:320px;
+  bottom: -100px;
+  left: -100px;
+  background: radial-gradient(circle, var(--color-pink), transparent 70%);
+  animation: blobDrift 18s ease-in-out infinite reverse;
+}
+
+.collage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.piece {
+  position: absolute;
+  opacity: 0.9;
+}
+
+.pieceFish {
+  top: 40%;
+  left: 5%;
+  animation: floatA 7s ease-in-out infinite;
+}
+
+
+.visualContent {
+  position: relative;
+  z-index: 2;
 }
 
 .title {
@@ -26,13 +106,50 @@
   font-weight: 400;
   line-height: var(--space-line-height-lg);
   color: var(--color-white);
-  margin-bottom: var(--space-line-height-xl);
 }
 
-.form {
+/* ============ Panel (right) ============ */
+
+.panel {
+  position: relative;
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3vw, 2rem);
   display: flex;
   flex-direction: column;
-  gap: var(--space-line-height-lg);
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 240, 235, 0.16), rgba(255, 240, 235, 0.05));
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid #fff0eb3c;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .panel::before {
+    background: rgba(84, 0, 0, 0.6);
+  }
+}
+
+/* ============ Form ============ */
+
+.form {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-line-height-md);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-line-height-md);
 }
 
 .field {
@@ -47,6 +164,10 @@
   font-weight: 400;
   line-height: var(--space-line-height-md);
   color: var(--color-white);
+
+  span {
+    color: var(--color-pink);
+  }
 }
 
 .input,
@@ -54,21 +175,32 @@
 .textarea {
   width: 100%;
   padding: 12px 16px;
-  border: solid 1px var(--color-pink);
-  border-radius: 11px;
-  background: var(--color-brown);
+  border: 1px solid #fff0eb3c;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 240, 235, 0.12), rgba(255, 240, 235, 0.04));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   color: var(--color-white);
   font-family: HeyWow, sans-serif;
   font-size: var(--font-size-md);
   line-height: var(--space-line-height-md);
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .input,
+  .select,
+  .textarea {
+    background: rgba(84, 0, 0, 0.5);
+  }
 }
 
 .input:focus,
 .select:focus,
 .textarea:focus {
   border-color: var(--color-green);
+  box-shadow: 0 0 0 3px rgba(50, 255, 171, 0.2);
 }
 
 .input::placeholder,
@@ -82,6 +214,17 @@
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 40px;
+  cursor: pointer;
+}
+
+.select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.select option {
+  color: var(--color-dark);
+  background: var(--color-white);
 }
 
 .textarea {
@@ -89,25 +232,96 @@
   min-height: 120px;
 }
 
+/* ---- react-datepicker ---- */
+
+.datepicker {
+  position: relative;
+}
+
+.datepicker :global(.react-datepicker-wrapper) {
+  width: 100%;
+}
+
+.datepicker :global(.react-datepicker) {
+  font-family: HeyWow, sans-serif;
+  font-size: var(--font-size-md);
+  background: var(--color-dark);
+  border: 1px solid var(--color-pink);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.datepicker :global(.react-datepicker-popper) {
+  z-index: 30;
+}
+
+.datepicker :global(.react-datepicker__header) {
+  background: var(--color-brown);
+  border-bottom: 1px solid var(--color-pink);
+  border-radius: 12px 12px 0 0;
+  padding-top: 12px;
+}
+
+.datepicker :global(.react-datepicker__current-month),
+.datepicker :global(.react-datepicker__day-name),
+.datepicker :global(.react-datepicker__day) {
+  color: var(--color-white);
+}
+
+.datepicker :global(.react-datepicker__navigation-icon::before) {
+  border-color: var(--color-white);
+}
+
+.datepicker :global(.react-datepicker__day:hover) {
+  background: var(--color-pink);
+  color: var(--color-white);
+}
+
+.datepicker :global(.react-datepicker__day--selected),
+.datepicker :global(.react-datepicker__day--keyboard-selected) {
+  background: var(--color-green);
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.datepicker :global(.react-datepicker__day--keyboard-selected):hover {
+  background: var(--color-green);
+  color: var(--color-dark);
+}
+
+.datepicker :global(.react-datepicker__day--outside-month) {
+  opacity: 0.4;
+}
+
+.datepicker :global(.react-datepicker__day--disabled) {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.datepicker :global(.react-datepicker__triangle) {
+  display: none;
+}
+
+/* ============ Button ============ */
+
 .button {
   padding: 12px 16px;
   background: var(--color-green);
   color: var(--color-dark);
   border: none;
-  border-radius: 11px;
+  border-radius: 12px;
   font-family: HeyWow, sans-serif;
   font-size: var(--font-size-md);
   font-weight: 600;
   line-height: var(--space-line-height-md);
   cursor: pointer;
-  transition: transform 0.2s ease, brightness 0.2s ease;
-  max-width: 440px;
-  align-self: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(50, 255, 171, 0.25);
 }
 
-.button:hover {
-  transform: scale(1.05);
-  
+.button:hover:not(:disabled) {
+  transform: scale(1.03);
+  box-shadow: 0 10px 32px rgba(50, 255, 171, 0.4);
 }
 
 .button:disabled {
@@ -115,11 +329,13 @@
   cursor: not-allowed;
 }
 
+/* ============ Alerts ============ */
+
 .success {
   padding: 16px;
   background: var(--color-green);
   color: var(--color-dark);
-  border-radius: 11px;
+  border-radius: 12px;
   font-family: HeyWow, sans-serif;
   font-size: var(--font-size-md);
   margin-bottom: var(--space-line-height-lg);
@@ -129,14 +345,76 @@
   padding: 16px;
   background: var(--color-pink);
   color: var(--color-white);
-  border-radius: 11px;
+  border-radius: 12px;
   font-family: HeyWow, sans-serif;
   font-size: var(--font-size-md);
   margin-bottom: var(--space-line-height-lg);
 }
 
+/* ============ Animations ============ */
+
+@keyframes floatA {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes floatB {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes floatC {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes blobDrift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, 16px) scale(1.1);
+  }
+}
+
+/* ============ Responsive ============ */
+
 @media (min-width: 768px) {
-  .button {
-    align-self: flex-start;
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .visual {
+    min-height: 560px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blobPink,
+  .blobGreen,
+  .piece {
+    animation: none;
   }
 }

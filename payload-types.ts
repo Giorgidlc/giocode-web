@@ -133,7 +133,13 @@ export interface Lead {
   email: string;
   telefono?: string | null;
   mensaje?: string | null;
-  servicio?: ('web' | 'mobile' | 'uiux' | 'consulting') | null;
+  /**
+   * Debe coincidir con el campo value de un servicio existente.
+   */
+  servicio?: string | null;
+  fecha_cita?: string | null;
+  duracion?: number | null;
+  estado_cita?: ('pending' | 'confirmed' | 'cancelled' | 'completed') | null;
   estado?: ('new' | 'contacted' | 'converted' | 'lost') | null;
   updatedAt: string;
   createdAt: string;
@@ -145,6 +151,10 @@ export interface Lead {
 export interface Service {
   id: number;
   titulo: string;
+  /**
+   * Identificador único del servicio que usa el formulario de contacto (ej. web, mobile, uiux).
+   */
+  value: string;
   descripcion?: string | null;
   precio?: number | null;
   activo?: boolean | null;
@@ -472,6 +482,9 @@ export interface LeadsSelect<T extends boolean = true> {
   telefono?: T;
   mensaje?: T;
   servicio?: T;
+  fecha_cita?: T;
+  duracion?: T;
+  estado_cita?: T;
   estado?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -482,6 +495,7 @@ export interface LeadsSelect<T extends boolean = true> {
  */
 export interface ServicesSelect<T extends boolean = true> {
   titulo?: T;
+  value?: T;
   descripcion?: T;
   precio?: T;
   activo?: T;

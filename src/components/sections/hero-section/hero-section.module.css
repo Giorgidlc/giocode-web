@@ -4,6 +4,7 @@
   align-items: center;
   gap: 4rem;
   margin-block-start: clamp(40px, 20vh, 140px);
+
 }
 
 .introContent {
