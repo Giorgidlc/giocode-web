@@ -374,7 +374,7 @@ function redesignCost(m: number): number {
   return Math.min(m, 2) * REDESIGN_PER_WEB + Math.max(0, m - 2) * REDESIGN_PER_WEB_DISCOUNTED
 }
 
-export const MONTHLY_PRICE = 390
+export const MONTHLY_PRICE = 90
 
 export interface BudgetSelection {
   fixN: number
@@ -557,12 +557,9 @@ export function MensualContent() {
           <h3>Incluye</h3>
           <ul>
             <li>Servidor europeo gestionado (incluido)</li>
-            <li>Actualizaciones de software, plugins y dependencias</li>
-            <li>SSL automático y cabeceras de seguridad</li>
-            <li>Backups diarios externos + prueba de restauración</li>
-            <li>Monitoreo 24h, aviso en &lt;5 min</li>
-            <li>Pequeños cambios de contenido (texto/foto)</li>
-            <li>Informe mensual de una página</li>
+            <li>SSL automático</li>
+            <li>Backups diarios externos automáticos</li>
+            <li>Monitoreo 24h con aviso automático</li>
           </ul>
         </div>
         <div className={`${styles.card} ${styles.themeLight}`}>
@@ -575,6 +572,10 @@ export function MensualContent() {
             <li>Campañas SEO / Ads</li>
             <li>E-commerce, video, foto</li>
             <li>Arreglo de webs rotas (aparte)</li>
+            <li>Actualizaciones manuales (aparte)</li>
+            <li>Informe mensual (aparte)</li>
+            <li>Pequeños cambios de contenido (aparte)</li>
+            <li>Intervención ante alertas (aparte)</li>
           </ul>
         </div>
       </div>
@@ -820,7 +821,7 @@ export const SLIDES: DeckSlide[] = [
     id: 'mensual',
     section: 'Presupuesto',
     sectionLabel: '5 · Presupuesto',
-    title: 'Mantenimiento mensual · 390 €',
+    title: 'Mantenimiento mensual · 90 €',
     content: null,
   },
   {
