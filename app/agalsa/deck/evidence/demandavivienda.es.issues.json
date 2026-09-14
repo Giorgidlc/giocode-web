@@ -1,0 +1,114 @@
+{
+  "web": "demandavivienda.es",
+  "source": "issues_overview_report_demandavivienda.es.csv",
+  "total": 28,
+  "alta": [
+    {
+      "name": "Códigos de respuesta: Error de cliente interno (4xx)",
+      "type": "Problema",
+      "pct": "9,700",
+      "urls": "16"
+    },
+    {
+      "name": "Títulos de página: Múltiple",
+      "type": "Problema",
+      "pct": "16,670",
+      "urls": "1"
+    },
+    {
+      "name": "Títulos de página: Fuera de <head>",
+      "type": "Problema",
+      "pct": "16,670",
+      "urls": "1"
+    },
+    {
+      "name": "Validación: Varias etiquetas <head>",
+      "type": "Problema",
+      "pct": "0,790",
+      "urls": "1"
+    },
+    {
+      "name": "Validación: Varias etiquetas <body>",
+      "type": "Problema",
+      "pct": "0,790",
+      "urls": "1"
+    }
+  ],
+  "media": [
+    {
+      "name": "Imágenes: Por encima de 100 kB",
+      "type": "Oportunidad",
+      "pct": "45,650",
+      "urls": "21"
+    },
+    {
+      "name": "Títulos de página: Menos de 30 caracteres",
+      "type": "Oportunidad",
+      "pct": "66,670",
+      "urls": "4"
+    },
+    {
+      "name": "Contenido: Páginas con poco contenido",
+      "type": "Oportunidad",
+      "pct": "16,670",
+      "urls": "1"
+    },
+    {
+      "name": "H1: Falta",
+      "type": "Problema",
+      "pct": "83,330",
+      "urls": "5"
+    }
+  ],
+  "bajaCount": 19,
+  "bajaTop": [
+    {
+      "name": "Contenido: Lectura difícil",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "6"
+    },
+    {
+      "name": "H2: Múltiple",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "6"
+    },
+    {
+      "name": "Meta description: Falta",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "6"
+    },
+    {
+      "name": "Enlaces: Páginas con muchos enlaces de salida externos",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "6"
+    },
+    {
+      "name": "Enlaces: Enlaces de salida sin texto de anclaje internos",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "6"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Content-Security-Policy",
+      "type": "Aviso",
+      "pct": "87,300",
+      "urls": "110"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Secure Referrer-Policy",
+      "type": "Aviso",
+      "pct": "87,300",
+      "urls": "110"
+    },
+    {
+      "name": "Seguridad: Falta encabezado X-Content-Type-Options",
+      "type": "Aviso",
+      "pct": "87,300",
+      "urls": "110"
+    }
+  ]
+}

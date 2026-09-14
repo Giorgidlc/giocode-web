@@ -1,0 +1,23 @@
+{
+  "web": "sierradelademanda.com",
+  "harFile": "GTmetrix-sierradelademanda.com-20260913T063232-SVQKAz9v.har",
+  "title": "Agalsa – Sierra de la Demanda – Turismo Rural – Empresas – Leader – Agalsa",
+  "timings": {
+    "fullyLoadedMs": 10334,
+    "ttiMs": 10334,
+    "lcpMs": 3359,
+    "fcpMs": 1333,
+    "firstPaintMs": 1333,
+    "onLoadMs": 3641,
+    "onContentLoadMs": 3241
+  },
+  "technical": {
+    "server": "nginx",
+    "php": "7.1.33 EOL",
+    "totalRequests": 254,
+    "status200": 239,
+    "statusError": 15,
+    "transferBytes": 14363819,
+    "transferMB": 13.7
+  }
+}

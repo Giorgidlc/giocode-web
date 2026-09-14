@@ -1,0 +1,23 @@
+{
+  "web": "demandavivienda.es",
+  "harFile": "GTmetrix-demandavivienda.es-20260913T235817-qf9j0EjW.har",
+  "title": "Demanda Vivienda — Feria",
+  "timings": {
+    "fullyLoadedMs": 2514,
+    "ttiMs": 1536,
+    "lcpMs": 2514,
+    "fcpMs": 1536,
+    "firstPaintMs": 932,
+    "onLoadMs": 1420,
+    "onContentLoadMs": 808
+  },
+  "technical": {
+    "server": "nginx",
+    "php": "?",
+    "totalRequests": 87,
+    "status200": 74,
+    "statusError": 13,
+    "transferBytes": 5978850,
+    "transferMB": 5.7
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "web": "vivelademanda.com",
+  "harFile": "www.vivelademanda.com-20260914T093055.json",
+  "title": "ViveLaDemanda",
+  "timings": {
+    "fullyLoadedMs": 5845,
+    "ttiMs": 1462,
+    "lcpMs": 1458,
+    "fcpMs": 1118,
+    "firstPaintMs": 620,
+    "onLoadMs": 2899,
+    "onContentLoadMs": 2841
+  },
+  "technical": {
+    "server": "Apache",
+    "php": "Laravel (SaaS)",
+    "totalRequests": 88,
+    "status200": 87,
+    "statusError": 1,
+    "transferBytes": 3312314,
+    "transferMB": 3.2
+  }
+}
