@@ -1,0 +1,126 @@
+{
+  "web": "sierradelademanda.com",
+  "source": "issues_overview_report--sierradelademanda.csv",
+  "total": 39,
+  "alta": [
+    {
+      "name": "Paginación: La URL de paginación no está en la etiqueta de anclaje",
+      "type": "Problema",
+      "pct": "1,000",
+      "urls": "1"
+    },
+    {
+      "name": "Directivas: Noindex",
+      "type": "Aviso",
+      "pct": "1,640",
+      "urls": "8"
+    },
+    {
+      "name": "Canonicals: Canonicalizada",
+      "type": "Aviso",
+      "pct": "2,000",
+      "urls": "2"
+    }
+  ],
+  "media": [
+    {
+      "name": "Contenido: Páginas con poco contenido",
+      "type": "Oportunidad",
+      "pct": "22,000",
+      "urls": "22"
+    },
+    {
+      "name": "Imágenes: Por encima de 100 kB",
+      "type": "Oportunidad",
+      "pct": "19,610",
+      "urls": "20"
+    },
+    {
+      "name": "H1: Falta",
+      "type": "Problema",
+      "pct": "1,000",
+      "urls": "1"
+    },
+    {
+      "name": "Títulos de página: Más de 60 caracteres",
+      "type": "Oportunidad",
+      "pct": "26,000",
+      "urls": "26"
+    },
+    {
+      "name": "Títulos de página: Duplicado",
+      "type": "Oportunidad",
+      "pct": "12,000",
+      "urls": "12"
+    },
+    {
+      "name": "Canonicals: Falta",
+      "type": "Aviso",
+      "pct": "21,000",
+      "urls": "21"
+    },
+    {
+      "name": "H1: Múltiple",
+      "type": "Aviso",
+      "pct": "88,000",
+      "urls": "88"
+    },
+    {
+      "name": "Títulos de página: Más de 561 píxeles",
+      "type": "Oportunidad",
+      "pct": "25,000",
+      "urls": "25"
+    }
+  ],
+  "bajaCount": 28,
+  "bajaTop": [
+    {
+      "name": "Enlaces: Enlaces de salida sin texto de anclaje internos",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "100"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Content-Security-Policy",
+      "type": "Aviso",
+      "pct": "99,390",
+      "urls": "487"
+    },
+    {
+      "name": "Seguridad: Falta encabezado X-Frame-Options",
+      "type": "Aviso",
+      "pct": "99,390",
+      "urls": "487"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Secure Referrer-Policy",
+      "type": "Aviso",
+      "pct": "99,390",
+      "urls": "487"
+    },
+    {
+      "name": "Seguridad: Falta encabezado HSTS",
+      "type": "Aviso",
+      "pct": "99,390",
+      "urls": "487"
+    },
+    {
+      "name": "Seguridad: Falta encabezado X-Content-Type-Options",
+      "type": "Aviso",
+      "pct": "99,390",
+      "urls": "487"
+    },
+    {
+      "name": "Meta description: Falta",
+      "type": "Oportunidad",
+      "pct": "90,000",
+      "urls": "90"
+    },
+    {
+      "name": "Imágenes: Falta texto ALT",
+      "type": "Problema",
+      "pct": "64,710",
+      "urls": "66"
+    }
+  ]
+}

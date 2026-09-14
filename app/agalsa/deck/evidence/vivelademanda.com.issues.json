@@ -1,0 +1,84 @@
+{
+  "web": "vivelademanda.com",
+  "source": "issues_overview_report_vivelademanda.com.csv",
+  "total": 12,
+  "alta": [
+    {
+      "name": "Enlaces: Páginas sin enlaces de salida internos",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "1"
+    }
+  ],
+  "media": [
+    {
+      "name": "Canonicals: Falta",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "1"
+    },
+    {
+      "name": "Contenido: Páginas con poco contenido",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "1"
+    },
+    {
+      "name": "Títulos de página: Menos de 200 píxeles",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "1"
+    },
+    {
+      "name": "H1: Falta",
+      "type": "Problema",
+      "pct": "100,000",
+      "urls": "1"
+    },
+    {
+      "name": "Títulos de página: Menos de 30 caracteres",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "1"
+    }
+  ],
+  "bajaCount": 6,
+  "bajaTop": [
+    {
+      "name": "H2: Falta",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "1"
+    },
+    {
+      "name": "Meta description: Falta",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "1"
+    },
+    {
+      "name": "Seguridad: Falta encabezado X-Content-Type-Options",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "8"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Secure Referrer-Policy",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "8"
+    },
+    {
+      "name": "Seguridad: Falta encabezado HSTS",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "8"
+    },
+    {
+      "name": "Seguridad: Falta encabezado X-Frame-Options",
+      "type": "Aviso",
+      "pct": "100,000",
+      "urls": "8"
+    }
+  ]
+}

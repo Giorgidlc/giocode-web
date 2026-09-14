@@ -1,0 +1,23 @@
+{
+  "web": "agalsa.es",
+  "harFile": "GTmetrix-agalsa.es-20260913T233336-MN3JIC9z.har",
+  "title": "AGALSA Sierra de la Demanda",
+  "timings": {
+    "fullyLoadedMs": 1812,
+    "ttiMs": 1033,
+    "lcpMs": 767,
+    "fcpMs": 554,
+    "firstPaintMs": 554,
+    "onLoadMs": 1255,
+    "onContentLoadMs": 652
+  },
+  "technical": {
+    "server": "nginx",
+    "php": "?",
+    "totalRequests": 61,
+    "status200": 58,
+    "statusError": 0,
+    "transferBytes": 3313041,
+    "transferMB": 3.2
+  }
+}

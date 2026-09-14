@@ -1,0 +1,150 @@
+{
+  "web": "agalsa.es",
+  "source": "issues_overview_report_agalsa.es.csv",
+  "total": 47,
+  "alta": [
+    {
+      "name": "Códigos de respuesta: Error de cliente interno (4xx)",
+      "type": "Problema",
+      "pct": "0,800",
+      "urls": "4"
+    },
+    {
+      "name": "Paginación: La URL de paginación no está en la etiqueta de anclaje",
+      "type": "Problema",
+      "pct": "0,600",
+      "urls": "1"
+    },
+    {
+      "name": "Directivas: Noindex",
+      "type": "Aviso",
+      "pct": "0,530",
+      "urls": "2"
+    },
+    {
+      "name": "Canonicals: Canonicalizada",
+      "type": "Aviso",
+      "pct": "3,000",
+      "urls": "6"
+    },
+    {
+      "name": "Seguridad: URL HTTP",
+      "type": "Problema",
+      "pct": "8,660",
+      "urls": "40"
+    },
+    {
+      "name": "Seguridad: Contenido mixto",
+      "type": "Problema",
+      "pct": "0,220",
+      "urls": "1"
+    },
+    {
+      "name": "Códigos de respuesta: Interno bloqueado por Robots.txt",
+      "type": "Aviso",
+      "pct": "15,200",
+      "urls": "76"
+    }
+  ],
+  "media": [
+    {
+      "name": "Imágenes: Por encima de 100 kB",
+      "type": "Oportunidad",
+      "pct": "72,780",
+      "urls": "123"
+    },
+    {
+      "name": "Títulos de página: Más de 60 caracteres",
+      "type": "Oportunidad",
+      "pct": "15,660",
+      "urls": "26"
+    },
+    {
+      "name": "Títulos de página: Duplicado",
+      "type": "Oportunidad",
+      "pct": "2,410",
+      "urls": "4"
+    },
+    {
+      "name": "Títulos de página: Menos de 30 caracteres",
+      "type": "Oportunidad",
+      "pct": "8,430",
+      "urls": "14"
+    },
+    {
+      "name": "Canonicals: Falta",
+      "type": "Aviso",
+      "pct": "17,000",
+      "urls": "34"
+    },
+    {
+      "name": "Títulos de página: Menos de 200 píxeles",
+      "type": "Oportunidad",
+      "pct": "3,610",
+      "urls": "6"
+    },
+    {
+      "name": "H1: Múltiple",
+      "type": "Aviso",
+      "pct": "0,600",
+      "urls": "1"
+    },
+    {
+      "name": "Títulos de página: Más de 561 píxeles",
+      "type": "Oportunidad",
+      "pct": "12,050",
+      "urls": "20"
+    }
+  ],
+  "bajaCount": 32,
+  "bajaTop": [
+    {
+      "name": "Enlaces: Enlaces de salida sin texto de anclaje internos",
+      "type": "Oportunidad",
+      "pct": "100,000",
+      "urls": "166"
+    },
+    {
+      "name": "Imágenes: Falta texto ALT",
+      "type": "Problema",
+      "pct": "98,220",
+      "urls": "166"
+    },
+    {
+      "name": "H2: Múltiple",
+      "type": "Aviso",
+      "pct": "87,950",
+      "urls": "146"
+    },
+    {
+      "name": "H2: Duplicado",
+      "type": "Oportunidad",
+      "pct": "86,140",
+      "urls": "143"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Content-Security-Policy",
+      "type": "Aviso",
+      "pct": "80,950",
+      "urls": "374"
+    },
+    {
+      "name": "Seguridad: Falta encabezado X-Frame-Options",
+      "type": "Aviso",
+      "pct": "80,950",
+      "urls": "374"
+    },
+    {
+      "name": "Seguridad: Falta encabezado Secure Referrer-Policy",
+      "type": "Aviso",
+      "pct": "80,950",
+      "urls": "374"
+    },
+    {
+      "name": "Seguridad: Falta encabezado HSTS",
+      "type": "Aviso",
+      "pct": "80,090",
+      "urls": "370"
+    }
+  ]
+}
