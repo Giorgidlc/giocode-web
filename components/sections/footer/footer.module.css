@@ -14,3 +14,21 @@
   justify-content: center;
   gap: 1rem;
 }
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footerLinks a {
+  font-size: var(--font-size-md);
+  color: var(--color-white);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}

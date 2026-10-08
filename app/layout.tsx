@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeyWow from "next/font/local";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from '@vercel/analytics/next';
+import CookieConsent from "@/components/consent/CookieConsent";
 import "./globals.css";
 
 const heyWow = HeyWow({
@@ -21,6 +20,7 @@ const heyWow = HeyWow({
   
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://giocode.dev"),
   title: "Giocode",
   description: "Generamos soluciones digitales a medida para tu negocio.",
   
@@ -64,11 +64,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${heyWow.className} `}>
-        {children}
-      </body>
-      <Analytics />
-      <SpeedInsights />
-    </html>
+    <body className={`${heyWow.className} `}>
+      {children}
+      <CookieConsent />
+    </body>
+  </html>
   );
 }
