@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Política de Privacidad" updated="[fecha]">
+    <LegalPage title="Política de Privacidad" updated="2026">
       <section className={styles.section}>
         <h2 className={styles.h2}>1. Responsable del tratamiento</h2>
         <p className={styles.p}>

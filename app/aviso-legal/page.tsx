@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function LegalNoticesPage() {
   return (
-    <LegalPage title="Aviso Legal" updated="[fecha]">
+    <LegalPage title="Aviso Legal" updated="2026">
       <section className={styles.section}>
         <h2 className={styles.h2}>1. Datos del titular</h2>
         <p className={styles.p}>
@@ -55,7 +55,7 @@ export default function LegalNoticesPage() {
         <h2 className={styles.h2}>5. Legislación aplicable</h2>
         <p className={styles.p}>
           Estas condiciones se rigen por la legislación española. Para cualquier conflicto,
-          las partes se someten a los juzgados y tribunales de [ciudad], sin perjuicio de
+          las partes se someten a los juzgados y tribunales de Burgos, sin perjuicio de
           lo establecido en la normativa de consumo.
         </p>
       </section>
