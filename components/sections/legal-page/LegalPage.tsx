@@ -16,7 +16,7 @@ export default function LegalPage({ title, updated, children }: LegalPageProps) 
         <HeaderNav />
         <div className={styles.content}>
           <h1 className={styles.title}>{title}</h1>
-          {/* {updated && <p className={styles.updated}>Última actualización: {updated}</p>} */}
+          {updated && <p className={styles.updated}>Última actualización: {updated}</p>}
           {children}
         </div>
         <Footer />
