@@ -7,12 +7,14 @@ export default function Footer() {
     <section className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerImage}>
-        <Image
-          src="/imagotipo-white-giocode.png"
-          alt="Hero Graph"
-          width={159}
-          height={40}
-        />
+        <Link href="/" aria-label="Volver a la página principal">
+          <Image
+            src="/imagotipo-white-giocode.png"
+            alt="Hero Graph"
+            width={159}
+            height={40}
+          />
+        </Link>
 
         </div>
         <nav className={styles.footerLinks}>
