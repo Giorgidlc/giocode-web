@@ -84,7 +84,7 @@ export default function PrivacyPage() {
         <p className={styles.p}>
           Puedes ejercer los derechos de acceso, rectificación, supresión, oposición,
           limitación y portabilidad, así como el derecho a retirar tu consentimiento,
-          escribiendo a <span className={styles.strong}>[email]</span> indicando el derecho
+          escribiendo a <span className={styles.strong}>gio@giocode.dev</span> indicando el derecho
           que deseas ejercer. También puedes presentar una reclamación ante la Agencia
           Española de Protección de Datos (aepd.es).
         </p>
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
         <h2 className={styles.h2}>8. Contacto</h2>
         <p className={styles.p}>
           Para cualquier cuestión relacionada con la privacidad, escríbenos a{" "}
-          <span className={styles.strong}>[email]</span>.
+          <span className={styles.strong}>gio@giocode.dev</span>.
         </p>
       </section>
     </LegalPage>
