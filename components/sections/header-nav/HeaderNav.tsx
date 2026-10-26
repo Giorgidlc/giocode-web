@@ -8,7 +8,7 @@ export default function HeaderNav() {
         <Link href="/" aria-label="Volver a la página principal">
           <Image
             className={styles.logo}
-            src="/imagotipo-white-giocode.png"
+            src="/giocode_logo.png"
             alt="Giocode logo"
             width={159}
             height={40}
