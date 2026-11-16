@@ -9,10 +9,11 @@ export default function Footer() {
         <div className={styles.footerImage}>
         <Link href="/" aria-label="Volver a la página principal">
           <Image
-            src="/imagotipo-white-giocode.png"
+            src="/giocode_logo.png"
             alt="Hero Graph"
             width={159}
             height={40}
+            style={{ objectFit: "contain" }}
           />
         </Link>
 
